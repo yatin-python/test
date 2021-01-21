@@ -1,0 +1,158 @@
+def getdate():
+    import datetime
+    return datetime.datetime.now()
+
+
+print("Press 1 For Harry")
+print("Press 2 For Rohan")
+print("Press 3 For Hammad")
+name = int(input())
+
+if name == 1:  # Harry-------------------------------------------------------------------------------------
+    print("Press 1 For Lock")
+    print("Press 2 For Retrive")
+    hlr = int(input())
+
+    if hlr == 1:
+        print("you can add contant into your file")
+        print("Press 1 For Food")
+        print("Press 2 For Exercise")
+        hl = int(input())
+
+        if hl == 1:
+            print("Enter The Food You Eat Today :-")
+            hfl = str(input())
+
+            hfl1 = open("h_food.txt", "a")
+            hfl1.write(str(getdate()))
+            hfl1.write(hfl)
+            hfl1.write("\n")
+            hfl1.close()
+        else:
+            print("Enter The Exercise You Done Today :-")
+            hel = input()
+
+            hel1 = open("h_ex.txt", "a")
+            hel1.write(str(getdate()))
+            hel1.write(hel)
+            hel1.write("\n")
+            hel1.close()
+    else:
+        print("you are retriving information only")
+        print("Press 1 For Food")
+        print("Press 2 For Exercise")
+        hr = int(input())
+
+        if hr == 1:
+            hfr = open("h_food.txt")
+            a = hfr.read()
+            print(a)
+            hfr.close()
+        else:
+            her = open("h_ex.txt")
+            a = her.read()
+            print(a)
+            her.close()
+elif name == 2:   # Rohan----------------------------------------------------------------------------------------
+    print("Press 1 For Lock")
+    print("Press 2 For Retrive")
+    rlr = int(input())
+
+    if rlr == 1:
+        print("you can add contant into your file")
+        print("Press 1 For Food")
+        print("Press 2 For Exercise")
+        rl = int(input())
+
+        if rl == 1:
+            print("Enter The Food You Eat Today :-")
+            rfl = input()
+
+            rfl1 = open("r_food.txt", "a")
+            rfl1.write(str(getdate()))
+            rfl1.write(rfl)
+            rfl1.write("\n")
+            rfl1.close()
+        elif rl == 2:
+            print("Enter The Exercise You Done Today :-")
+            rel = input()
+
+            rel1 = open("r_ex.txt", "a")
+            rel1.write(str(getdate()))
+            rel1.write(rel)
+            rel1.write("\n")
+            rel1.close()
+        else:
+            print("Please Enter Valid Number")
+    elif rlr == 2:
+        print("you are retriving information only")
+        print("Press 1 For Food")
+        print("Press 2 For Exercise")
+        rr = int(input())
+
+        if rr == 1:
+            rfr = open("r_food.txt")
+            a = rfr.read()
+            print(a)
+            rfr.close()
+        elif rr == 2:
+            rer = open("r_ex.txt")
+            a = rer.read()
+            print(a)
+            rer.close()
+        else:
+            print("Please Enter Valid Number")
+    else:
+        print("Please Enter Valid Number")
+else:
+    #  Hammad-------------------------------------------------------------------------------------------------
+    print("Press 1 For Lock")
+    print("Press 2 For Retrive")
+    hmlr = int(input())
+
+    if hmlr == 1:
+        print("you can add contant into your file")
+        print("Press 1 For Food")
+        print("Press 2 For Exercise")
+        hml = int(input())
+
+        if hml == 1:
+            print("Enter The Food You Eat Today :-")
+            hmfl = input()
+
+            hmfl1 = open("hm_food.txt", "a")
+            hmfl1.write(str(getdate()))
+            hmfl1.write(hmfl)
+            hmfl1.write("\n")
+            hmfl1.close()
+        elif hml == 2:
+            print("Enter The Exercise You Done Today :-")
+            hmel = input()
+
+            hmel1 = open("hm_ex.txt", "a")
+            hmel1.write(str(getdate()))
+            hmel1.write(hmel)
+            hmel1.write("\n")
+            hmel1.close()
+        else:
+            print("Please Enter Valid Number")
+    elif hmlr == 2:
+        print("you are retriving information only")
+        print("Press 1 For Food")
+        print("Press 2 For Exercise")
+        hmr = int(input())
+
+        if hmr == 1:
+            hmr1 = open("hm_food.txt")
+            a = hmr1.read()
+            print(a)
+            hmr1.close()
+        elif hmr == 2:
+            hme = open("hm_ex.txt")
+            a = hme.read()
+            print(a)
+            hme.close()
+        else:
+            print("please Enter Valid Number")
+    else:
+        print("Please Enter Valid Number")
